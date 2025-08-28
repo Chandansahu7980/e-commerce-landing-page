@@ -206,22 +206,21 @@ a:hover::before {
 .product-container{
     margin: 2em;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 0.5em;
 }
 
 .product-container .product{
     padding: 1em;
+    display: flex;
+    flex-direction: column;
+    /* background-color:; */
 }
 
-.product .product-image{
+.product-container .product-image{
     margin-bottom: 1em;
     height: 200px;
     border-radius: 1em;
-    /* background: url(./imgs/8615582.png); */
-    background-size: cover;
-    background-position: center;
-    
     box-shadow: 2px 5px 20px 1px gray;
 }
 
@@ -240,4 +239,24 @@ a:hover::before {
     color: gray;
     font-size: 0.9em;
     margin: 0.5em auto;
+}
+.product .action{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 1em 0;
+}
+.product button{
+    cursor: pointer;
+    padding: 0.5em;
+    background-color: var(--primary-color);
+    color: var(--heading-color);
+    box-shadow: 0 0 2px gray;
+    border-radius: 0.5em;
+    width: 100%;
+}
+.product button:hover{
+    transition: all 0.7s ease-in-out;
+    background-color: var(--heading-color);
+    color: var(--primary-color);
 }
